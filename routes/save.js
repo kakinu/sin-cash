@@ -5,10 +5,17 @@ var router = express.Router();
 // var connection = require('../mysqlConnection'); // 追加
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'pass',
-  database: 'list_app',
+  // ローカル
+  // host: 'localhost',
+  // user: 'root',
+  // password: 'pass',
+  // database: 'list_app',
+
+  // heroku
+  username:'b93042bd63403e',
+  password: '645e7902',
+  host:'us-cdbr-east-02.cleardb.com',
+  database:'heroku_3ef88c4b1656dc9',
 });
 
 connection.connect((err) => {
