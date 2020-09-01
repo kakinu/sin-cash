@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 
   // heroku
   username:'b93042bd63403e',
-  password: '645e7902',
+  password:'645e7902',
   host:'us-cdbr-east-02.cleardb.com',
   database:'heroku_3ef88c4b1656dc9',
 });
@@ -37,6 +37,7 @@ router.post('/', function(req, res, next) {
     [req.body.menu, req.body.sex, req.body.ages],
     (error, results) => {
       console.log(results);
+      console.log(error);
       res.send('データが送信されました！！');
     }
   );
